@@ -1,0 +1,15 @@
+g++ -O3 pi_chudnovsky.cpp -o pi_chudnovsky_cpp -lgmpxx -lgmp -lmpfr
+
+# Default = 100000 digits
+./pi_chudnovsky_cpp
+
+# Arbitrary digits
+./pi_chudnovsky_cpp 123
+./pi_chudnovsky_cpp 1000
+./pi_chudnovsky_cpp 1e6
+
+# With suffixes
+./pi_chudnovsky_cpp 1K
+./pi_chudnovsky_cpp 10M
+./pi_chudnovsky_cpp --calculate 2M
+./pi_chudnovsky_cpp --digits 5G    # enormous; will be extremely slow / memory-heavy

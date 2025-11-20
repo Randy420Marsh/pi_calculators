@@ -1,0 +1,18 @@
+# Default (100000 digits)
+cargo run --release
+
+# Explicit decimal count
+cargo run --release -- 123
+
+# With calculate flag
+cargo run --release -- --calculate 1K
+
+# Other suffixes
+cargo run --release -- --digits 5M
+cargo run --release -- -c 132876K
+
+cargo run --release -- 1e6
+cargo run --release -- 1E6
+cargo run --release -- --digits 2T
+cargo run --release -- --calculate 5g     # enormous; will be extremely slow / memory-heavy
+
